@@ -1,0 +1,59 @@
+body{
+background-color: #000;
+}
+h1{
+font-family:arial,verdana;
+font-weight:bold;
+color:orange;
+text-align:center;
+}
+#razas li{
+display:inline;
+margin:10px;
+}
+#razas li img{
+width:170px;
+height:350px;
+}
+#contenedor{
+margin: 0 auto;
+width:650px;
+}
+#formulario{
+background-color:gray;
+width:300px;
+height:46px;
+margin:30px auto;
+}
+#nombre{
+position:relative;
+top:10px;
+left:35px;
+}
+#name{
+position:relative;
+top:10px;
+left:49px;
+}
+#jugar{
+position:relative;
+top:25px;
+left:110px;
+width:100px;
+}
+label{
+font-weight:bold;
+}
+#razas{
+margin-top:100px;
+}
+#menu li{
+display:inline;	
+}
+#menu li a{
+text-decoration:none;
+background-color:orange;
+}
+.clear{
+clear:both
+}
