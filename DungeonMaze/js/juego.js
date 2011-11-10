@@ -1,22 +1,32 @@
 var y = 300;
 var x = 0;
-var y_troll = 100;
-var x_troll = 300;
-/*var interval_id = setInterval(function() { cambiarPosicionTroll(); },3000);*/
+var y_orco = 100;
+var x_orco = 300;
+/*var interval_id = setInterval(function() { cambiarPosicionOrco(); },3000);*/
 
-function cambiarPosicionTroll() {
-    x_troll = Math.floor(Math.random()*83) * 5;
-    y_troll = Math.floor(Math.random()*75) * 5;
-    $("#trollface").css({ "top": y_troll + "px"});
-    $("#trollface").css({ "left": x_troll + "px"});
+function cambiarPosicionOrco() {
+    var aleatorio = Math.floor(Math.random()*4);
+    if(aleatorio==0){
+	arribaOrco();
+	}
+	else if(aleatorio==1){
+	abajoOrco();
+	}
+	else if(aleatorio==2){
+	derechaOrco();
+	}
+	else if(aleatorio==3){
+	izquierdaOrco();
+	}
+	
 }
 
 $(document).ready(function () {
-    cambiarPosicionTroll();
+    cambiarPosicionOrco();
 });
 
 function detectarColision() {
-    if (x == x_troll && y == y_troll) {
+    if (x == x_orco && y == y_orco) {
         $("#trollface").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
         clearInterval(interval_id);
         $('#trollface').fadeOut('slow', function() {
@@ -25,48 +35,68 @@ function detectarColision() {
     }
 }
 
-function arriba(){
-    	y = y - 50;
+function arribaUser(){
+		y = y - 50;
         if (y < 0) y = 0;
         $("#pedobear").css({ "top": y + "px"});
 }
-function abajo(){
+function abajoUser(){
 		y = y + 50;
         if (y > 550) y = 600;
         $("#pedobear").css({ "top": y + "px"});
 }
-function derecha(){
+function derechaUser(){
 		x = x + 50;
-        if (x > 1150) x = 1200;        
+        if (x > 1050) x = 1100;        
         $("#pedobear").css({ "left": x + "px"});
 }
-function izquierda(){
+function izquierdaUser(){
 		x = x - 50;
         if (x < 0) x = 0;
         $("#pedobear").css({ "left": x + "px"});
+}
+function arribaOrco(){
+		y_orco = y_orco - 50;
+        if (y_orco < 0) y_orco = 0;
+        $("#trollface").css({ "top": y_orco + "px"});
+}
+function abajoOrco(){
+		y_orco = y_orco + 50;
+        if (y_orco > 550) y_orco = 600;
+        $("#trollface").css({ "top": y_orco + "px"});
+}
+function derechaOrco(){
+		x_orco = x_orco + 50;
+        if (x_orco > 1050) x_orco = 1100;        
+        $("#trollface").css({ "left": x_orco + "px"});
+}
+function izquierdaOrco(){
+		x_orco = x_orco - 50;
+        if (x_orco < 0) x_orco = 0;
+        $("#trollface").css({ "left": x_orco + "px"});
 }
 
 $("body").keypress(function(e) {
     if (e.which == 115) {
         //DOWN - S
-        abajo();
-		cambiarPosicionTroll();
+        abajoUser();
+		cambiarPosicionOrco();
       
     }
     if (e.which == 119) {
         //UP - W
-		arriba();
-		cambiarPosicionTroll();
+		arribaUser();
+		cambiarPosicionOrco();
     }
     if (e.which == 100) {
         //RIGHT - D
-        derecha();
-		cambiarPosicionTroll();
+        derechaUser();
+		cambiarPosicionOrco();
     }
     if (e.which == 97) {
         //LEFT - A
-        izquierda();
-		cambiarPosicionTroll();
+        izquierdaUser();
+		cambiarPosicionOrco();
     }
     detectarColision();
 });
