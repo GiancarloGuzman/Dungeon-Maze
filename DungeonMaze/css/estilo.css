@@ -48,7 +48,7 @@ font-weight:bold;
 margin-top:100px;
 }
 #menu li{
-display:inline;	
+display:inline;  
 }
 #menu li a{
 text-decoration:none;
@@ -56,4 +56,29 @@ background-color:orange;
 }
 .clear{
 clear:both
+}
+#ring {
+    width: 1250px;
+    height: 630px;
+    border: 3px solid #000;
+    position: relative;
+	background-color:white;
+	margin-left:80px;
+}
+#pedobear {
+    width: 50px;
+    height: 50px;
+    background-image: url('http://images.cheezburger.com/avatarstore/3070057/129235138371453182.gif');
+    border: 1px solid #000;
+    position: absolute;
+    z-index: 10;
+}
+#trollface {
+    width: 50px;
+    height: 50px;
+    background-image: url('http://s2.subirimagenes.com/imagen/previo/thump_6803518trollface.png');
+    border: 1px solid #000;
+    position: absolute;
+    left: 50px;
+    top: 50px;
 }
