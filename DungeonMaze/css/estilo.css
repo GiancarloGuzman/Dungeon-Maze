@@ -48,7 +48,7 @@ font-weight:bold;
 margin-top:100px;
 }
 #menu li{
-display:inline;  
+display:inline;	
 }
 #menu li a{
 text-decoration:none;
@@ -59,7 +59,7 @@ clear:both
 }
 #ring {
     width: 1250px;
-    height: 630px;
+    height: 650px;
     border: 3px solid #000;
     position: relative;
 	background-color:white;
@@ -72,6 +72,7 @@ clear:both
     border: 1px solid #000;
     position: absolute;
     z-index: 10;
+	top: 300px;
 }
 #trollface {
     width: 50px;
