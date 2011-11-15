@@ -80,6 +80,24 @@ clear:both
     background-image: url('http://s2.subirimagenes.com/imagen/previo/thump_6803518trollface.png');
     border: 1px solid #000;
     position: absolute;
-    left: 50px;
-    top: 50px;
+    left: 150px;
+    top: 150px;
+}
+#trollface1{
+	width: 50px;
+    height: 50px;
+    background-image: url('http://s2.subirimagenes.com/imagen/previo/thump_6803518trollface.png');
+    border: 1px solid #000;
+    position: absolute;
+    left: 250px;
+    top: 250px;
+}
+#trollface2{
+	width: 50px;
+    height: 50px;
+    background-image: url('http://s2.subirimagenes.com/imagen/previo/thump_6803518trollface.png');
+    border: 1px solid #000;
+    position: absolute;
+    left: 350px;
+    top: 350px;
 }
