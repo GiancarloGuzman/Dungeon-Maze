@@ -1,11 +1,13 @@
 var y = 300;
 var x = 0;
-var y_orco = 150;
-var x_orco = 150;
-var y_orco1 = 250;
-var x_orco1 = 250;
-var y_orco2 = 350;
-var x_orco2 = 350;
+var y_orco1 = 150;
+var x_orco1 = 300;
+var y_orco2 = 450;
+var x_orco2 = 800;
+var y_goblin1 = 150;
+var x_goblin1 = 800;
+var y_goblin2 = 450;
+var x_goblin2 = 300;
 
 function cambiarPosicionOrco() {
     var aleatorio = Math.floor(Math.random()*4);
@@ -24,10 +26,10 @@ function cambiarPosicionOrco() {
 }
 
 function detectarColision() {
-    if (x == x_orco && y == y_orco) {
-        $("#orco").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+    if (x == x_orco1 && y == y_orco1) {
+        $("#orco1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
         clearInterval(interval_id);
-        $('#orco').fadeOut('slow', function() {
+        $('#orco1').fadeOut('slow', function() {
     // Animation complete.
       });
     }
@@ -54,48 +56,60 @@ function izquierdaUser(){
         $("#pedobear").css({ "left": x + "px"});
 }
 function arribaOrco(){
-		y_orco = y_orco - 50;
-        if (y_orco < 0) y_orco = 0;
-        $("#orco").css({ "top": y_orco + "px"});
 		y_orco1 = y_orco1 - 50;
         if (y_orco1 < 0) y_orco1 = 0;
         $("#orco1").css({ "top": y_orco1 + "px"});
 		y_orco2 = y_orco2 - 50;
         if (y_orco2 < 0) y_orco2 = 0;
         $("#orco2").css({ "top": y_orco2 + "px"});
+		y_goblin1 = y_goblin1 - 50;
+        if (y_goblin1 < 0) y_goblin1 = 0;
+        $("#goblin1").css({ "top": y_goblin1 + "px"});
+		y_goblin2 = y_goblin2 - 50;
+        if (y_goblin2 < 0) y_goblin2 = 0;
+        $("#goblin2").css({ "top": y_goblin2 + "px"});
 }
 function abajoOrco(){
-		y_orco = y_orco + 50;
-        if (y_orco > 550) y_orco = 600;
-        $("#orco").css({ "top": y_orco + "px"});
 		y_orco1 = y_orco1 + 50;
         if (y_orco1 > 550) y_orco1 = 600;
         $("#orco1").css({ "top": y_orco1 + "px"});
 		y_orco2 = y_orco2 + 50;
         if (y_orco2 > 550) y_orco2 = 600;
         $("#orco2").css({ "top": y_orco2 + "px"});
+		y_goblin1 = y_goblin1 + 50;
+        if (y_goblin1 > 550) y_goblin1 = 600;
+        $("#goblin1").css({ "top": y_goblin1 + "px"});
+		y_goblin2 = y_goblin2 + 50;
+        if (y_goblin2 > 550) y_goblin2 = 600;
+        $("#goblin2").css({ "top": y_goblin2 + "px"});
 }
 function derechaOrco(){
-		x_orco = x_orco + 50;
-        if (x_orco > 1050) x_orco = 1100;        
-        $("#orco").css({ "left": x_orco + "px"});
 		x_orco1 = x_orco1 + 50;
         if (x_orco1 > 1050) x_orco1 = 1100;        
         $("#orco1").css({ "left": x_orco1 + "px"});
 		x_orco2 = x_orco2 + 50;
         if (x_orco2 > 1050) x_orco2 = 1100;        
         $("#orco2").css({ "left": x_orco2 + "px"});
+		x_goblin1 = x_goblin1 + 50;
+        if (x_goblin1 > 1050) x_goblin1 = 1100;        
+        $("#goblin1").css({ "left": x_goblin1 + "px"});
+		x_goblin2 = x_goblin2 + 50;
+        if (x_goblin2 > 1050) x_goblin2 = 1100;
+        $("#goblin2").css({ "left": x_goblin2 + "px"});
 }
 function izquierdaOrco(){
-		x_orco = x_orco - 50;
-        if (x_orco < 0) x_orco = 0;
-        $("#orco").css({ "left": x_orco + "px"});
 		x_orco1 = x_orco1 - 50;
         if (x_orco1 < 0) x_orco1 = 0;
         $("#orco1").css({ "left": x_orco1 + "px"});
 		x_orco2 = x_orco2 - 50;
         if (x_orco2 < 0) x_orco2 = 0;
         $("#orco2").css({ "left": x_orco2 + "px"});
+		x_goblin1 = x_goblin1 - 50;
+        if (x_goblin1 < 0) x_goblin1 = 0;
+        $("#goblin1").css({ "left": x_goblin1 + "px"});
+		x_goblin2 = x_goblin2 - 50;
+        if (x_goblin2 < 0) x_goblin2 = 0;
+        $("#goblin2").css({ "left": x_goblin2 + "px"});
 }
 $("body").keypress(function(e) {
     if (e.which == 115) {
