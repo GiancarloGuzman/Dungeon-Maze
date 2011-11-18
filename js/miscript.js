@@ -46,9 +46,10 @@ $(document).ready(function(){
 				e=document.getElementById("datos");
 				e.innerHTML="Heroe: "+heroe+ "<br/>" +"Ataque: "+ataque+"<br/>" +"Defensa: "+defensa+"<br/>" +"Daño: "+daño+"<br/>" +"Vida: "+vida;
 				break;
-				case 'Valkiria': 
+				
+				case 'valkiria': 
 				index=2;
-				heroe="valkiria";
+				heroe="Valkiria";
 				ataque="10";
 				defensa="12";
 				daño="20";

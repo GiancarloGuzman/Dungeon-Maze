@@ -21,8 +21,10 @@ width:650px;
 }
 #datos
 {
-background-color:gray;
-position:center;
+	width: 565px;
+    height: 100px;
+	background-color:gray;
+	margin-left:50px;
 }
 #formulario{
 background-color:gray;
@@ -44,7 +46,7 @@ left:49px;
 position:relative;
 top:25px;
 left:110px;
-widht:100px;
+width:100px;
 }
 #jugar{
 position:relative;
