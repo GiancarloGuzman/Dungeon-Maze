@@ -9,31 +9,52 @@ var x_goblin1 = 800;
 var y_goblin2 = 450;
 var x_goblin2 = 300;
 
-function cambiarPosicionOrco() {
+/*function cambiarPosicionOrco() {
     var aleatorio = Math.floor(Math.random()*4);
     if(aleatorio==0){
-	arribaOrco();
+	arribaOrco1();
 	}
 	else if(aleatorio==1){
-	abajoOrco();
+	abajoOrco1();
 	}
 	else if(aleatorio==2){
-	derechaOrco();
+	derechaOrco1();
 	}
 	else if(aleatorio==3){
-	izquierdaOrco();
+	izquierdaOrco1();
 	}	
 }
+*/
+
+
 
 function detectarColision() {
     if (x == x_orco1 && y == y_orco1) {
         $("#orco1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
         clearInterval(interval_id);
         $('#orco1').fadeOut('slow', function() {
-    // Animation complete.
+      });
+    }
+	else if (x == x_orco2 && y == y_orco2) {
+        $("#orco2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+        clearInterval(interval_id);
+        $('#orco2').fadeOut('slow', function() {
+      });
+    }
+	else if (x == x_goblin1 && y == y_goblin1) {
+        $("#goblin1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+        clearInterval(interval_id);
+        $('#goblin1').fadeOut('slow', function() {
+      });
+    }
+	else if (x == x_goblin2 && y == y_goblin2) {
+        $("#goblin2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+        clearInterval(interval_id);
+        $('#goblin2').fadeOut('slow', function() {
       });
     }
 }
+
 
 function arribaUser(){
 		y = y - 50;
@@ -55,83 +76,182 @@ function izquierdaUser(){
         if (x < 0) x = 0;
         $("#pedobear").css({ "left": x + "px"});
 }
-function arribaOrco(){
+function arribaOrco1(){
 		y_orco1 = y_orco1 - 50;
         if (y_orco1 < 0) y_orco1 = 0;
         $("#orco1").css({ "top": y_orco1 + "px"});
+}
+function arribaOrco2(){		
 		y_orco2 = y_orco2 - 50;
         if (y_orco2 < 0) y_orco2 = 0;
         $("#orco2").css({ "top": y_orco2 + "px"});
+}
+function arribaGoblin1(){		
 		y_goblin1 = y_goblin1 - 50;
         if (y_goblin1 < 0) y_goblin1 = 0;
         $("#goblin1").css({ "top": y_goblin1 + "px"});
+}
+function arribaGoblin2(){		
 		y_goblin2 = y_goblin2 - 50;
         if (y_goblin2 < 0) y_goblin2 = 0;
-        $("#goblin2").css({ "top": y_goblin2 + "px"});
+        $("#goblin2").css({ "top": y_goblin2 + "px"});		
 }
-function abajoOrco(){
+function abajoOrco1(){
 		y_orco1 = y_orco1 + 50;
         if (y_orco1 > 550) y_orco1 = 600;
         $("#orco1").css({ "top": y_orco1 + "px"});
+}		
+function abajoOrco2(){
 		y_orco2 = y_orco2 + 50;
         if (y_orco2 > 550) y_orco2 = 600;
         $("#orco2").css({ "top": y_orco2 + "px"});
+}
+function abajoGoblin1(){		
 		y_goblin1 = y_goblin1 + 50;
         if (y_goblin1 > 550) y_goblin1 = 600;
         $("#goblin1").css({ "top": y_goblin1 + "px"});
+}
+function abajoGoblin2(){
 		y_goblin2 = y_goblin2 + 50;
         if (y_goblin2 > 550) y_goblin2 = 600;
-        $("#goblin2").css({ "top": y_goblin2 + "px"});
+        $("#goblin2").css({ "top": y_goblin2 + "px"});		
 }
-function derechaOrco(){
+function derechaOrco1(){
 		x_orco1 = x_orco1 + 50;
         if (x_orco1 > 1050) x_orco1 = 1100;        
         $("#orco1").css({ "left": x_orco1 + "px"});
+}
+function derechaOrco2(){		
 		x_orco2 = x_orco2 + 50;
         if (x_orco2 > 1050) x_orco2 = 1100;        
         $("#orco2").css({ "left": x_orco2 + "px"});
+}
+function derechaGoblin1(){		
 		x_goblin1 = x_goblin1 + 50;
         if (x_goblin1 > 1050) x_goblin1 = 1100;        
         $("#goblin1").css({ "left": x_goblin1 + "px"});
+}
+function derechaGoblin2(){		
 		x_goblin2 = x_goblin2 + 50;
         if (x_goblin2 > 1050) x_goblin2 = 1100;
         $("#goblin2").css({ "left": x_goblin2 + "px"});
 }
-function izquierdaOrco(){
+function izquierdaOrco1(){
 		x_orco1 = x_orco1 - 50;
         if (x_orco1 < 0) x_orco1 = 0;
         $("#orco1").css({ "left": x_orco1 + "px"});
+}
+function izquierdaOrco2(){		
 		x_orco2 = x_orco2 - 50;
         if (x_orco2 < 0) x_orco2 = 0;
         $("#orco2").css({ "left": x_orco2 + "px"});
+}
+function izquierdaGoblin1(){
 		x_goblin1 = x_goblin1 - 50;
         if (x_goblin1 < 0) x_goblin1 = 0;
         $("#goblin1").css({ "left": x_goblin1 + "px"});
+}
+function izquierdaGoblin2(){		
 		x_goblin2 = x_goblin2 - 50;
         if (x_goblin2 < 0) x_goblin2 = 0;
-        $("#goblin2").css({ "left": x_goblin2 + "px"});
+        $("#goblin2").css({ "left": x_goblin2 + "px"});		
+}
+function movimientoOrco1(){
+		if(y > y_orco1){
+			abajoOrco1();
+		}
+		else if(y < y_orco1){
+			arribaOrco1();
+		}
+		else if(y == y_orco1){
+			if( x > x_orco1 ){
+				derechaOrco1();
+			}
+			else if( x < x_orco1 ){
+				izquierdaOrco1();
+			}
+		}
+}
+function movimientoOrco2(){
+		if(y > y_orco2){
+			abajoOrco2();
+		}
+		else if(y < y_orco2){
+			arribaOrco2();
+		}
+		else if(y == y_orco2){
+			if( x > x_orco2 ){
+				derechaOrco2();
+			}
+			else if( x < x_orco2 ){
+				izquierdaOrco2();
+			}
+		}
+}
+function movimientoGoblin1(){
+		if(y > y_goblin1){
+			abajoGoblin1();
+		}
+		else if(y < y_goblin1){
+			arribaGoblin1();
+		}
+		else if(y == y_goblin1){
+			if( x > x_goblin1 ){
+				derechaGoblin1();
+			}
+			else if( x < x_goblin1 ){
+				izquierdaGoblin1();
+			}
+		}
+}
+function movimientoGoblin2(){
+		if(y > y_goblin2){
+			abajoGoblin2();
+		}
+		else if(y < y_goblin2){
+			arribaGoblin2();
+		}
+		else if(y == y_goblin2){
+			if( x > x_goblin2 ){
+				derechaGoblin2();
+			}
+			else if( x < x_goblin2 ){
+				izquierdaGoblin2();
+			}
+		}
 }
 $("body").keypress(function(e) {
     if (e.which == 115) {
         //DOWN - S
         abajoUser();
-		cambiarPosicionOrco();
-      
+		movimientoOrco1();
+		movimientoOrco2();
+		movimientoGoblin1();
+		movimientoGoblin2();
     }
     if (e.which == 119) {
         //UP - W
 		arribaUser();
-		cambiarPosicionOrco();
+		movimientoOrco1();
+		movimientoOrco2();
+		movimientoGoblin1();
+		movimientoGoblin2();
     }
     if (e.which == 100) {
         //RIGHT - D
         derechaUser();
-		cambiarPosicionOrco();
+		movimientoOrco1();
+		movimientoOrco2();
+		movimientoGoblin1();
+		movimientoGoblin2();
     }
     if (e.which == 97) {
         //LEFT - A
         izquierdaUser();
-		cambiarPosicionOrco();
+		movimientoOrco1();
+		movimientoOrco2();
+		movimientoGoblin1();
+		movimientoGoblin2();
     }
     detectarColision();
 });
