@@ -4,7 +4,7 @@
 
 	<head><title>Dungeon Maze</title>
 
-		
+
 
 		<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.6.4/jquery.js" type="text/javascript"></script>
 
@@ -12,14 +12,17 @@
 
 		<script src="js/miscript.js" type="text/javascript"></script>
 
+		<link href="css/estilo.css" rel="stylesheet" type="text/css"/>
+
 		<link href="estilo.css" rel="stylesheet" type="text/css"/>
 
-		
+		<script src="js/juego.js" type="text/javascript"></script>
+
 
 	</head>
 
 	<body>
-
+		<div id="inicio" style="display:block">
 		<h1>Seleccione un H&eacute;roe</h1>
 
 			<div id="contenedor">
@@ -48,34 +51,58 @@
 					</li>
 
 				</ul>
+					<br />
+					<div id="datos" style="display:none;">
+					
+					</div>
+					<div id="formulario" >
 
-					<div id="formulario" style="block;">
-
-						<form>
+						<form id="ingreso">
 							<label for="Nombre"id="nombre">Nombre:</label>
 
 							<input type="text"id="name" name="name"/>
 
 							<br/>
-
-							<input type="button"id="jugar" value="Jugar"/>
+							<input type="button" id="registrar" value="Crear personaje"/>
+							<br/>
+							<input type="button" id="jugar" value="Jugar" />
 
 						</form>
 
-					
+
 
 					</div>
 
 				</div>
 
-				
+
 
 			</div>
 
-			
 
-			
 
+
+		</div>
+		<div id="level1" style="display:none">
+		<script src="js/juego.js" type="text/javascript"></script>
+
+		<h1>Dungeon Maze</h1>
+
+			<div id="ring">
+			<div id="pedobear"></div>
+			<div id="orco1"></div>
+			<div id="orco2"></div>
+			<div id="goblin1"></div>
+			<div id="goblin2"></div>
+			<div id="paredIzquierda"></div>
+			<div id="paredDerecha"></div>
+			<div id="paredArriba"></div>
+			<div id="paredAbajo"></div>
+			<div id="salida"></div>
+			</div>
+			<br />
+			<input type="button" id="prueba" value="prueba"/>
+		</div>
 	</body>
 
 </html>

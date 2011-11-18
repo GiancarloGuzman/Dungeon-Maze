@@ -41,7 +41,7 @@ function sz(el, p) {
 };
 function hex2(s) {
     s = parseInt(s).toString(16);
-    return ( s.length < 2 ) ? '0'+s : s;
+    return ( s.length < 3 ) ? '0'+s : s;
 };
 function gpc(node) {
     while(node) {
@@ -49,7 +49,7 @@ function gpc(node) {
         if (v && v != 'transparent' && v != 'rgba(0, 0, 0, 0)') {
             if (v.indexOf('rgb') >= 0) { 
                 rgb = v.match(/\d+/g); 
-                return '#'+ hex2(rgb[0]) + hex2(rgb[1]) + hex2(rgb[2]);
+                return '#'+ hex2(rgb[0]) + hex2(rgb[1]) + hex2(rgb[2]) + hex2(rgb[3]);
             }
             return v;
         }
@@ -247,4 +247,3 @@ $.fn.corner.defaults = {
 };
     
 })(jQuery);
-
