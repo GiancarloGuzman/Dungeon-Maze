@@ -252,6 +252,18 @@ function movimientoGoblin2(){
 			}
 		}
 }
+function salir()
+{
+	if(y>250 && x>1050)
+	{
+		$('#level1').fadeOut('slow', function() {
+			$("#level1").css("display", "none");
+		});
+		$('#level2').fadeIn('slow', function() {
+		$("#level2").css("display", "block");
+		});
+	}
+}
 $("body").keypress(function(e) {
     if (e.which == 115) {
         //DOWN - S
@@ -285,5 +297,6 @@ $("body").keypress(function(e) {
 		movimientoGoblin1();
 		movimientoGoblin2();
     }
+	salir();
     detectarColision();
 });
