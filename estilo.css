@@ -19,6 +19,11 @@ height:350px;
 margin: 0 auto;
 width:650px;
 }
+#datos
+{
+background-color:gray;
+position:center;
+}
 #formulario{
 background-color:gray;
 width:300px;
@@ -35,9 +40,15 @@ position:relative;
 top:10px;
 left:49px;
 }
-#jugar{
+#registrar{
 position:relative;
 top:25px;
+left:110px;
+widht:100px;
+}
+#jugar{
+position:relative;
+top:45px;
 left:110px;
 width:100px;
 }
