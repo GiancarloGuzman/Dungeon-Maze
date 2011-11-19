@@ -31,28 +31,46 @@ var x_goblin2 = 300;
 function detectarColision() {
     if (x == x_orco1 && y == y_orco1) {
         $("#orco1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+		$("#pelea").css('display','block');
+		$("#level1").css('display','none');
         clearInterval(interval_id);
         $('#orco1').fadeOut('slow', function() {
       });
     }
 	else if (x == x_orco2 && y == y_orco2) {
         $("#orco2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+		$("#pelea").css('display','block');
+		$("#level1").css('display','none');
         clearInterval(interval_id);
         $('#orco2').fadeOut('slow', function() {
       });
     }
 	else if (x == x_goblin1 && y == y_goblin1) {
         $("#goblin1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+		$("#pelea").css('display','block');
+		$("#level1").css('display','none');
         clearInterval(interval_id);
         $('#goblin1').fadeOut('slow', function() {
       });
     }
 	else if (x == x_goblin2 && y == y_goblin2) {
         $("#goblin2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
+		$("#pelea").css('display','block');
+		$("#level1").css('display','none');
         clearInterval(interval_id);
         $('#goblin2').fadeOut('slow', function() {
       });
     }
+	if(y == 300 && x == 1100)
+	{
+		$("#level1").fadeOut('slow', function() {
+			$("#level1").css("display", "none");
+		});
+		$("#level2").fadeIn('slow', function() {
+		$("#level2").css("display", "block");
+		});
+
+	}
 }
 
 
