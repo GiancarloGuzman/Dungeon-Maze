@@ -708,18 +708,18 @@ clear:both
     top: 210px;
 }
 #pelea{
-	width: 1150px;
+	width: 500px;
     height: 650px;
     border: 1px solid #000;
     position: relative;
-	background-color:green;
+	background-color:black;
 }
 #versus{
 	width: 400px;
     height: 300px;
     border: 1px solid #000;
     position: absolute;
-	background-color:yellow;
+	background-color:black;
 	top:340px;
 }
 #vidahumano{
@@ -741,18 +741,18 @@ clear:both
 	top: 50px;
 }
 #pelea2{
-	width: 1150px;
+	width: 500px;
     height: 650px;
     border: 1px solid #000;
     position: relative;
-	background-color:green;
+	background-color:black;
 }
 #versus2{
 	width: 400px;
     height: 300px;
     border: 1px solid #000;
     position: absolute;
-	background-color:yellow;
+	background-color:black;
 	top:340px;
 }
 #vidahumano2{
@@ -774,18 +774,18 @@ clear:both
 	top: 50px;
 }
 #pelea3{
-	width: 1150px;
+	width: 500px;
     height: 650px;
     border: 1px solid #000;
     position: relative;
-	background-color:green;
+	background-color:black;
 }
 #versus3{
 	width: 400px;
     height: 300px;
     border: 1px solid #000;
     position: absolute;
-	background-color:yellow;
+	background-color:black;
 	top:340px;
 }
 #vidahumano3{
