@@ -8,60 +8,61 @@ var y_goblin1 = 150;
 var x_goblin1 = 800;
 var y_goblin2 = 450;
 var x_goblin2 = 300;
+var x_moneda1 =	1050;
+var y_moneda1 = 0;
+var x_moneda2 =	1050;
+var y_moneda2 = 600;
+var x_moneda3 =	250;
+var y_moneda3 = 300;
+var x_moneda4 =	850;
+var y_moneda4 = 300;
+var x_llave1 = 550;
+var y_llave1 = 300;
+var llaveObtenida = 0;
+var x_puerta = 1100;
+var y_puerta = 300;
 
-/*function cambiarPosicionOrco() {
-    var aleatorio = Math.floor(Math.random()*4);
-    if(aleatorio==0){
-	arribaOrco1();
-	}
-	else if(aleatorio==1){
-	abajoOrco1();
-	}
-	else if(aleatorio==2){
-	derechaOrco1();
-	}
-	else if(aleatorio==3){
-	izquierdaOrco1();
-	}	
+function detectarLlave() {
+    if (x == x_llave1 && y == y_llave1) {
+        $("#puerta").css({'background-image': 'url(img/puerta.jpg)'});
+		$("#llave1").css('display','none');
+    }
 }
-*/
-
-
 
 function detectarColision() {
     if (x == x_orco1 && y == y_orco1) {
         $("#orco1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		$("#pelea").css('display','block');
-		$("#level1").css('display','none');
+		/*$("#pelea").css('display','block');
+		$("#level1").css('display','none');*/
         clearInterval(interval_id);
         $('#orco1').fadeOut('slow', function() {
       });
     }
 	else if (x == x_orco2 && y == y_orco2) {
         $("#orco2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		$("#pelea").css('display','block');
-		$("#level1").css('display','none');
+		/*$("#pelea").css('display','block');
+		$("#level1").css('display','none');*/
         clearInterval(interval_id);
         $('#orco2').fadeOut('slow', function() {
       });
     }
 	else if (x == x_goblin1 && y == y_goblin1) {
         $("#goblin1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		$("#pelea").css('display','block');
-		$("#level1").css('display','none');
+		/*$("#pelea").css('display','block');
+		$("#level1").css('display','none');*/
         clearInterval(interval_id);
         $('#goblin1').fadeOut('slow', function() {
       });
     }
 	else if (x == x_goblin2 && y == y_goblin2) {
         $("#goblin2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		$("#pelea").css('display','block');
-		$("#level1").css('display','none');
+		/*$("#pelea").css('display','block');
+		$("#level1").css('display','none');*/
         clearInterval(interval_id);
         $('#goblin2').fadeOut('slow', function() {
       });
     }
-	if(y == 300 && x == 1100)
+	/*if(y == 300 && x == 1100)
 	{
 		$("#level1").fadeOut('slow', function() {
 			$("#level1").css("display", "none");
@@ -70,7 +71,7 @@ function detectarColision() {
 		$("#level2").css("display", "block");
 		});
 
-	}
+	}*/
 }
 
 
@@ -343,5 +344,7 @@ $("body").keypress(function(e) {
 		movimientoGoblin1();
 		movimientoGoblin2();
     }
+	detectarLlave();
     detectarColision();
+
 });
