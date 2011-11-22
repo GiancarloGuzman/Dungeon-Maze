@@ -132,8 +132,8 @@ function izquierdaUser(){
         if (x < 0) x = 0;
 		if (x == 900 && y > 0 && y < 100) x = 950;
 		if (x == 900 && y > 500 && y < 600) x = 950;
-		if (x == 200 && y > 100 && y < 500) x = 250;
 		if (x == 900 && y > 100 && y < 500) x = 950;
+		if (x == 200 && y > 100 && y < 500) x = 250;
         $("#pedobear").css({ "left": x + "px"});
 }
 function arribaOrco1(){
