@@ -204,9 +204,9 @@ $(document).ready(function(){
 				defensa=14;
 				daño=15;
 				vida=100;
-				$("#pedobear").css({'background-image': 'url(img/ikepequeño.jpg)'});
-				$("#pedobear2").css({'background-image': 'url(img/ikepequeño.jpg)'});
-				$("#pedobear3").css({'background-image': 'url(img/ikepequeño.jpg)'});
+				$("#pedobear").css({'background-image': 'url(img/ikepequeno.jpg)'});
+				$("#pedobear2").css({'background-image': 'url(img/ikepequeno.jpg)'});
+				$("#pedobear3").css({'background-image': 'url(img/ikepequeno.jpg)'});
 				e=document.getElementById("datos");
 				e.innerHTML="Heroe: "+heroe+ "<br/>" +"Ataque: "+ataque+"<br/>" +"Defensa: "+defensa+"<br/>" +"Daño: "+daño+"<br/>" +"Vida: "+vida;
 				
@@ -218,9 +218,9 @@ $(document).ready(function(){
 				defensa=16;
 				daño=5;
 				vida=150;
-				$("#pedobear").css({'background-image': 'url(img/clerigopequeño.jpg)'});
-				$("#pedobear2").css({'background-image': 'url(img/clerigopequeño.jpg)'});
-				$("#pedobear3").css({'background-image': 'url(img/clerigopequeño.jpg)'});
+				$("#pedobear").css({'background-image': 'url(img/clerigopequeno.jpg)'});
+				$("#pedobear2").css({'background-image': 'url(img/clerigopequeno.jpg)'});
+				$("#pedobear3").css({'background-image': 'url(img/clerigopequeno.jpg)'});
 				e=document.getElementById("datos");
 				e.innerHTML="Heroe: "+heroe+ "<br/>" +"Ataque: "+ataque+"<br/>" +"Defensa: "+defensa+"<br/>" +"Daño: "+daño+"<br/>" +"Vida: "+vida;
 				break;
@@ -232,9 +232,9 @@ $(document).ready(function(){
 				defensa=12;
 				daño=20;
 				vida=50;
-				$("#pedobear").css({'background-image': 'url(img/valkiriapequeña.jpg)'});
-				$("#pedobear2").css({'background-image': 'url(img/valkiriapequeña.jpg)'});
-				$("#pedobear3").css({'background-image': 'url(img/valkiriapequeña.jpg)'});
+				$("#pedobear").css({'background-image': 'url(img/valkiriapequena.jpg)'});
+				$("#pedobear2").css({'background-image': 'url(img/valkiriapequena.jpg)'});
+				$("#pedobear3").css({'background-image': 'url(img/valkiriapequena.jpg)'});
 				e=document.getElementById("datos");
 				e.innerHTML="Heroe: "+heroe+ "<br/>" +"Ataque: "+ataque+"<br/>" +"Defensa: "+defensa+"<br/>" +"Daño: "+daño+"<br/>" +"Vida: "+vida;
 				break;
