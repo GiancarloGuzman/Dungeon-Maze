@@ -198,6 +198,30 @@ clear:both
     left: 550px;
     top: 300px;
 }
+#carcel1{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/carcel.jpg');
+    position: absolute;
+    left: 0px;
+    top: 600px;
+}
+#carcel2{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/carcel.jpg');
+    position: absolute;
+    left: 0px;
+    top: 600px;
+}
+#carcel3{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/carcel.jpg');
+    position: absolute;
+    left: 0px;
+    top: 600px;
+}
 #ring2{
     width: 1150px;
     height: 650px;
@@ -618,7 +642,7 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaarriba.jpg');
     left: 1250px;
-    top: 260px;
+    top: 150px;
 }
 #abajo2{
 	width: 50px;
@@ -627,7 +651,7 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaabajo.jpg');
     left: 1250px;
-    top: 320px;
+    top: 210px;
 }
 #derecha2{
 	width: 50px;
@@ -636,7 +660,7 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaderecha.jpg');
     left: 1310px;
-    top: 320px;
+    top: 210px;
 }
 #izquierda2{
 	width: 50px;
@@ -645,7 +669,7 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaizquierda.jpg');
     left: 1190px;
-    top: 320px;
+    top: 210px;
 }
 #arriba3{
 	width: 50px;
@@ -654,7 +678,7 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaarriba.jpg');
     left: 1250px;
-    top: 370px;
+    top: 150px;
 }
 #abajo3{
 	width: 50px;
@@ -663,7 +687,7 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaabajo.jpg');
     left: 1250px;
-    top: 430px;
+    top: 210px;
 }
 #derecha3{
 	width: 50px;
@@ -672,7 +696,7 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaderecha.jpg');
     left: 1310px;
-    top: 430px;
+    top: 210px;
 }
 #izquierda3{
 	width: 50px;
@@ -681,6 +705,138 @@ clear:both
 	border: 1px solid blue;
 	background-image:url('img/flechaizquierda.jpg');
     left: 1190px;
-    top: 430px;
+    top: 210px;
 }
-
+#pelea{
+	width: 1150px;
+    height: 650px;
+    border: 1px solid #000;
+    position: relative;
+	background-color:green;
+}
+#versus{
+	width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    position: absolute;
+	background-color:yellow;
+	top:340px;
+}
+#vidahumano{
+	width: 400px;
+	height: 50px;
+	position:absolute;
+	border:1px solid blue;
+	background-color:white;
+	left:0px;
+	top: 0px;
+}
+#vidaenemigo{
+	width: 400px;
+	height: 50px;
+	position:absolute;
+	border:1px solid blue;
+	background-color:white;
+	left:0px;
+	top: 50px;
+}
+#pelea2{
+	width: 1150px;
+    height: 650px;
+    border: 1px solid #000;
+    position: relative;
+	background-color:green;
+}
+#versus2{
+	width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    position: absolute;
+	background-color:yellow;
+	top:340px;
+}
+#vidahumano2{
+	width: 400px;
+	height: 50px;
+	position:absolute;
+	border:1px solid blue;
+	background-color:white;
+	left:0px;
+	top: 0px;
+}
+#vidaenemigo2{
+	width: 400px;
+	height: 50px;
+	position:absolute;
+	border:1px solid blue;
+	background-color:white;
+	left:0px;
+	top: 50px;
+}
+#pelea3{
+	width: 1150px;
+    height: 650px;
+    border: 1px solid #000;
+    position: relative;
+	background-color:green;
+}
+#versus3{
+	width: 400px;
+    height: 300px;
+    border: 1px solid #000;
+    position: absolute;
+	background-color:yellow;
+	top:340px;
+}
+#vidahumano3{
+	width: 400px;
+	height: 50px;
+	position:absolute;
+	border:1px solid blue;
+	background-color:white;
+	left:0px;
+	top: 0px;
+}
+#vidaenemigo3{
+	width: 400px;
+	height: 50px;
+	position:absolute;
+	border:1px solid blue;
+	background-color:white;
+	left:0px;
+	top: 50px;
+}
+#tusdatos
+{
+	width: 130px;
+	height: 200px;
+	position:absolute;
+	border:1px solid blue;
+	background-color:white;
+	left:1210px;
+	top:340px;
+}
+#corazon1{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/corazon.jpg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#corazon2{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/corazon.jpg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
+#corazon3{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/corazon.jpg');
+    position: absolute;
+    left: 0px;
+    top: 0px;
+}
