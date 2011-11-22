@@ -17,8 +17,8 @@
 		<link href="estilo.css" rel="stylesheet" type="text/css"/>
 
 		<script src="js/juego.js" type="text/javascript"></script>
-
-
+		
+		<script src="js/dados.js" type="text/javascript"></script>
 	</head>
 
 	<body>
@@ -86,7 +86,7 @@
 		<div id="level1" style="display:none">
 		<script src="js/juego.js" type="text/javascript"></script>
 
-		<h1>Dungeon Maze Nivel 1</h1>
+		<h1>Dungeon Maze</h1>
 
 			<div id="ring">
 			<div id="pedobear"></div>
@@ -107,10 +107,16 @@
 			</div>
 			<br />
 			<input type="button" id="prueba" value="prueba"/>
+			<br/>
+			<input type="button" id="arriba1" value="arriba" onClick="arribaUser(); movimientoOrco1(); movimientoOrco2(); movimientoGoblin1(); movimientoGoblin2();detectarLlave(); salir(); detectarColision();"/>
+			<br/>
+			<input type="button" id="abajo1" value="abajo" onClick="abajoUser(); movimientoOrco1(); movimientoOrco2(); movimientoGoblin1(); movimientoGoblin2();detectarLlave(); salir(); detectarColision();"/>
+			<br/>
+			<input type="button" id="derecha1" value="derecha" onClick="derechaUser(); movimientoOrco1(); movimientoOrco2(); movimientoGoblin1(); movimientoGoblin2();detectarLlave(); salir(); detectarColision();"/>
+			<br/>
+			<input type="button" id="izquierda1" value="izquierda" onClick="izquierdaUser(); movimientoOrco1(); movimientoOrco2(); movimientoGoblin1(); movimientoGoblin2();detectarLlave(); salir(); detectarColision();"/>
+			
 		</div>
-		
-		
-		
 		<div id="pelea" style="display:none">
 		<script src="js/dados.js" type="text/javascript"></script>
 		<canvas id = "canvas" width = "400" height = "300" style="background-color:white">
@@ -119,9 +125,6 @@
 		<br />
 		<button onClick = "throwdice();"> Throw dice </button>
 		</div>
-		
-		
-		
 		<div id="level2" style="display:none">
 		<script src="js/juegonivel2.js" type="text/javascript"></script>
 
@@ -153,6 +156,18 @@
 			<div id="llave2"></div>
 			<div id="puerta2"></div>
 			</div>
+			</ br>
+			<input type="button" id="arriba1" value="arriba" onClick="arribaUser2();"/>
+			<br/>
+			<input type="button" id="abajo1" value="abajo" onClick="abajoUser2();"/>
+			<br/>
+			<input type="button" id="derecha1" value="derecha" onClick="derechaUser2(); "/>
+			<br/>
+			<input type="button" id="izquierda1" value="izquierda" onClick="izquierdaUser2(); "/>
+		</div>
+		
+		<div id="level3" style="display:none">
+		<p style="color: red">Fuiste trolleado!!*2</p>
 		</div>
 	</body>
 

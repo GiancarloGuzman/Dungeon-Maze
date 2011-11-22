@@ -13,8 +13,8 @@ var cwidth = 400;
 
   
   function throwdice(){
-    ch = 1+Math.floor(Math.random()*5);
-	cd = 1+Math.floor(Math.random()*5);
+    ch = 1+Math.floor(Math.random()*5);;
+	cd = 1+Math.floor(Math.random()*5);;
     dx = dicex;
     dy = dicey;    
     drawface(ch);
@@ -23,6 +23,43 @@ var cwidth = 400;
 	cd = 1+Math.floor(Math.random()*6);*/
     drawface(cd);
 	alert(' '+ch+' '+cd);
+	/*if(ch==1 && cd==3)
+	{	var d = document.getElementById("orco1");
+		var p=d.parentNode;
+		p.removeChild(d);	
+		$("#pelea").css('display','none');
+		$("#level1").css('display','block');
+		
+	}*/
+	
+	if(ch==2 && cd==4)
+	{	
+		$("#pelea").css('display','none');
+		$("#level1").css('display','block');
+		
+	}
+	/*ch=3;
+	cd=5;
+	if(ch==3 && cd==5)
+	{	var d = document.getElementById("goblin1");
+		var p=d.parentNode;
+		p.removeChild(d);	
+		$("#pelea").css('display','none');
+		$("#level1").css('display','block');
+		
+	}
+	ch=4;
+	cd=6;
+	if(ch==4 && cd==6)
+	{	var d = document.getElementById("goblin2");
+		var p=d.parentNode;
+		p.removeChild(d);	
+		$("#pelea").css('display','none');
+		$("#level1").css('display','block');
+		ch=1;
+		cd=1;
+		
+	}*/
   }
   
   function drawface(n,n2) {

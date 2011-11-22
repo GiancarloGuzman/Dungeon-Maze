@@ -1,5 +1,5 @@
-var y_nivel1 = 300;
-var x_nivel1 = 0;
+var y = 300;
+var x = 0;
 var y_orco1 = 150;
 var x_orco1 = 300;
 var y_orco2 = 450;
@@ -17,99 +17,124 @@ var y_moneda3 = 300;
 var x_moneda4 =	850;
 var y_moneda4 = 300;
 var x_llave1 = 550;
-var y_llave1 = 300;
+var y_llave1 = 300;	
 var llaveObtenida = 0;
 var x_puerta = 1100;
 var y_puerta = 300;
 
 function detectarLlave() {
-    if (x_nivel1 == x_llave1 && y_nivel1 == y_llave1) {
+    if (x ==550 && y == 300) {
+		llaveObtenida = 1;
         $("#puerta").css({'background-image': 'url(img/puerta.jpg)'});
-		$("#llave1").css('display','none');
-    }
+		$("#llave1").css('display','none');}
 }
 
 function detectarColision() {
-    if (x_nivel1 == x_orco1 && y_nivel1 == y_orco1) {
-        $("#orco1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		/*$("#pelea").css('display','block');
-		$("#level1").css('display','none');*/
+    if (x == x_orco1 && y == y_orco1) {
+        /*$("#orco1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});*/
+		$("#pelea").css("display","block");
+		$("#level1").css('display','none');	
+			x_orco1="";
+			y_orco1="";
+		var d = document.getElementById("orco1");
+		var p=d.parentNode;
+		p.removeChild(d);	
         clearInterval(interval_id);
         $('#orco1').fadeOut('slow', function() {
       });
     }
-	else if (x_nivel1 == x_orco2 && y_nivel1 == y_orco2) {
+	/*else if (x == x_orco2 && y == y_orco2) {
         $("#orco2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		/*$("#pelea").css('display','block');
-		$("#level1").css('display','none');*/
+		$("#pelea").css('display','block');
+		$("#level1").css('display','none');
+			x_orco2= 1200;
+			y_orco2= 700;
+	
         clearInterval(interval_id);
         $('#orco2').fadeOut('slow', function() {
-      });
-    }
-	else if (x_nivel1 == x_goblin1 && y_nivel1 == y_goblin1) {
+      });*/
+
+	/*else if (x == x_goblin1 && y == y_goblin1) {
         $("#goblin1").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		/*$("#pelea").css('display','block');
-		$("#level1").css('display','none');*/
+		$("#pelea").css('display','block');
+		$("#level1").css('display','none');
+			x_goblin1= 1150;
+			y_goblin1= 650;
+
         clearInterval(interval_id);
         $('#goblin1').fadeOut('slow', function() {
       });
     }
-	else if (x_nivel1 == x_goblin2 && y_nivel1 == y_goblin2) {
+	else if (x == x_goblin2 && y == y_goblin2) {
         $("#goblin2").css({'background-image': 'url(http://profile.ak.fbcdn.net/hprofile-ak-snc4/261133_139054042840031_3050851_q.jpg)'});
-		/*$("#pelea").css('display','block');
-		$("#level1").css('display','none');*/
+		/*$("#pelea").css("display","block");
+		$("#level1").css("display","none");
+			x_goblin2= 1150;
+			y_goblin2= 650;
+		
         clearInterval(interval_id);
         $('#goblin2').fadeOut('slow', function() {
       });
-    }
-	/*if(y_nivel1 == 300 && x_nivel1 == 1100)
-	{
+    }*/
+}
+/*function pelea()
+{
+	if (x == x_orco1 && y == y_orco1) {
+		$("#pelea").css('display','block');
+		$("#level1").css('display','none');
+	}
+	if (x == x_orco2 && y == y_orco2) {
+	}
+	
+}*/
+function salir()
+{
+	if(y == 300 && x == 1100){
+	
 		$("#level1").fadeOut('slow', function() {
 			$("#level1").css("display", "none");
 		});
 		$("#level2").fadeIn('slow', function() {
-		$("#level2").css("display", "block");
-		});
-
-	}*/
+			$("#level2").css("display", "block");
+		});}
 }
 
 
 function arribaUser(){
-		y_nivel1 = y_nivel1 - 50;
-        if (y_nivel1 < 0) y_nivel1 = 0;
-		if (y_nivel1 == 50 && x_nivel1 > 150 && x_nivel1 < 950) y_nivel1 = 100;
-		if (y_nivel1 == 550 && x_nivel1 > 150 && x_nivel1 < 950) y_nivel1 = 600;
-		if (y_nivel1 == 450 && x_nivel1 > 150 && x_nivel1 < 250) y_nivel1 = 500;
-		if (y_nivel1 == 450 && x_nivel1 > 850 && x_nivel1 < 950) y_nivel1 = 500;
-        $("#pedobear").css({ "top": y_nivel1 + "px"});
+		y = y - 50;
+        if (y < 0) y = 0;
+		if (y == 50 && x > 150 && x < 950) y = 100;
+		if (y == 550 && x > 150 && x < 950) y = 600;
+		if (y == 450 && x > 150 && x < 250) y = 500;
+		if (y == 450 && x > 850 && x < 950) y = 500;
+        $("#pedobear").css({ "top": y + "px"});
 }
 function abajoUser(){
-		y_nivel1 = y_nivel1 + 50;
-        if (y_nivel1 > 550) y_nivel1 = 600;
-		if (y_nivel1 == 50 && x_nivel1 > 150 && x_nivel1 < 950) y_nivel1 = 0;
-		if (y_nivel1 == 550 && x_nivel1 > 150 && x_nivel1 < 950) y_nivel1 = 500;
-		if (y_nivel1 == 150 && x_nivel1 > 150 && x_nivel1 < 250) y_nivel1 = 100;
-		if (y_nivel1 == 150 && x_nivel1 > 850 && x_nivel1 < 950) y_nivel1 = 100;
-        $("#pedobear").css({ "top": y_nivel1 + "px"});
+		y = y + 50;
+        if (y > 550) y = 600;
+		if (y == 50 && x > 150 && x < 950) y = 0;
+		if (y == 550 && x > 150 && x < 950) y = 500;
+		if (y == 150 && x > 150 && x < 250) y = 100;
+		if (y == 150 && x > 850 && x < 950) y = 100;
+        $("#pedobear").css({ "top": y + "px"});
 }
 function derechaUser(){
-		x_nivel1 = x_nivel1 + 50;
-        if (x_nivel1 > 1050) x_nivel1 = 1100;
-		if (x_nivel1 == 200 && y_nivel1 > 0 && y_nivel1 < 100) x_nivel1 = 150;
-		if (x_nivel1 == 200 && y_nivel1 > 500 && y_nivel1 < 600) x_nivel1 = 150;
-		if (x_nivel1 == 200 && y_nivel1 > 100 && y_nivel1 < 500) x_nivel1 = 150;
-		if (x_nivel1 == 900 && y_nivel1 > 100 && y_nivel1 < 500) x_nivel1 = 850;
-        $("#pedobear").css({ "left": x_nivel1 + "px"});
+		x = x + 50;
+        if (x > 1050) x = 1100;
+		if (x == 200 && y > 0 && y < 100) x = 150;
+		if (x == 200 && y > 500 && y < 600) x = 150;
+		if (x == 200 && y > 100 && y < 500) x = 150;
+		if (x == 900 && y > 100 && y < 500) x = 850;
+        $("#pedobear").css({ "left": x + "px"});
 }
 function izquierdaUser(){
-		x_nivel1 = x_nivel1 - 50;
-        if (x_nivel1 < 0) x_nivel1 = 0;
-		if (x_nivel1 == 900 && y_nivel1 > 0 && y_nivel1 < 100) x_nivel1 = 950;
-		if (x_nivel1 == 900 && y_nivel1 > 500 && y_nivel1 < 600) x_nivel1 = 950;
-		if (x_nivel1 == 200 && y_nivel1 > 100 && y_nivel1 < 500) x_nivel1 = 250;
-		if (x_nivel1 == 900 && y_nivel1 > 100 && y_nivel1 < 500) x_nivel1 = 950;
-        $("#pedobear").css({ "left": x_nivel1 + "px"});
+		x = x - 50;
+        if (x < 0) x = 0;
+		if (x == 900 && y > 0 && y < 100) x = 950;
+		if (x == 900 && y > 500 && y < 600) x = 950;
+		if (x == 200 && y > 100 && y < 500) x = 250;
+		if (x == 900 && y > 100 && y < 500) x = 950;
+        $("#pedobear").css({ "left": x + "px"});
 }
 function arribaOrco1(){
 		y_orco1 = y_orco1 - 50;
@@ -248,103 +273,66 @@ function izquierdaGoblin2(){
         $("#goblin2").css({ "left": x_goblin2 + "px"});		
 }
 function movimientoOrco1(){
-		if(y_nivel1 > y_orco1){
+		if(y > y_orco1){
 			abajoOrco1();
 		}
-		else if(y_nivel1 < y_orco1){
+		else if(y < y_orco1){
 			arribaOrco1();
 		}
-		else if(y_nivel1 == y_orco1){
-			if( x_nivel1 > x_orco1 ){
+		else if(y == y_orco1){
+			if( x > x_orco1 ){
 				derechaOrco1();
 			}
-			else if( x_nivel1 < x_orco1 ){
+			else if( x < x_orco1 ){
 				izquierdaOrco1();
 			}
 		}
 }
 function movimientoOrco2(){
-		if(y_nivel1 > y_orco2){
+		if(y > y_orco2){
 			abajoOrco2();
 		}
-		else if(y_nivel1 < y_orco2){
+		else if(y < y_orco2){
 			arribaOrco2();
 		}
-		else if(y_nivel1 == y_orco2){
-			if( x_nivel1 > x_orco2 ){
+		else if(y == y_orco2){
+			if( x > x_orco2 ){
 				derechaOrco2();
 			}
-			else if( x_nivel1 < x_orco2 ){
+			else if( x < x_orco2 ){
 				izquierdaOrco2();
 			}
 		}
 }
 function movimientoGoblin1(){
-		if(y_nivel1 > y_goblin1){
+		if(y > y_goblin1){
 			abajoGoblin1();
 		}
-		else if(y_nivel1 < y_goblin1){
+		else if(y < y_goblin1){
 			arribaGoblin1();
 		}
-		else if(y_nivel1 == y_goblin1){
-			if( x_nivel1 > x_goblin1 ){
+		else if(y == y_goblin1){
+			if( x > x_goblin1 ){
 				derechaGoblin1();
 			}
-			else if( x_nivel1 < x_goblin1 ){
+			else if( x < x_goblin1 ){
 				izquierdaGoblin1();
 			}
 		}
 }
 function movimientoGoblin2(){
-		if(y_nivel1 > y_goblin2){
+		if(y > y_goblin2){
 			abajoGoblin2();
 		}
-		else if(y_nivel1 < y_goblin2){
+		else if(y < y_goblin2){
 			arribaGoblin2();
 		}
-		else if(y_nivel1 == y_goblin2){
-			if( x_nivel1 > x_goblin2 ){
+		else if(y == y_goblin2){
+			if( x > x_goblin2 ){
 				derechaGoblin2();
 			}
-			else if( x_nivel1 < x_goblin2 ){
+			else if( x < x_goblin2 ){
 				izquierdaGoblin2();
 			}
 		}
 }
-$("body").keypress(function(e) {
-    if (e.which == 115) {
-        //DOWN - S
-        abajoUser();
-		movimientoOrco1();
-		movimientoOrco2();
-		movimientoGoblin1();
-		movimientoGoblin2();
-    }
-    if (e.which == 119) {
-        //UP - W
-		arribaUser();
-		movimientoOrco1();
-		movimientoOrco2();
-		movimientoGoblin1();
-		movimientoGoblin2();
-    }
-    if (e.which == 100) {
-        //RIGHT - D
-        derechaUser();
-		movimientoOrco1();
-		movimientoOrco2();
-		movimientoGoblin1();
-		movimientoGoblin2();
-    }
-    if (e.which == 97) {
-        //LEFT - A
-        izquierdaUser();
-		movimientoOrco1();
-		movimientoOrco2();
-		movimientoGoblin1();
-		movimientoGoblin2();
-    }
-	detectarLlave();
-    detectarColision();
-
-});
