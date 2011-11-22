@@ -88,7 +88,7 @@ $(document).ready(function(){
 		});
 		$('#jugar').click(function()
 		{
-			$("#level2").css("display", "block");
+			$("#level3").css("display", "block");
 			$("#inicio").css("display", "none");
 		});
 		$('#prueba').click(function()

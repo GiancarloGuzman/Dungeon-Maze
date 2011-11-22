@@ -398,3 +398,179 @@ clear:both
     left: 800px;
     top: 300px;
 }
+#ring3{
+    width: 1150px;
+    height: 650px;
+    border: 1px solid #000;
+    position: relative;
+	background-color:white;
+	margin-left:10px;
+}
+#pedobear3{
+    width: 50px;
+    height: 50px;
+    background-image: url('http://images.cheezburger.com/avatarstore/3070057/129235138371453182.gif');
+    position: absolute;
+    z-index: 10;
+	top: 300px;
+}
+#paredIzquierda3{
+	width: 50px;
+    height: 550px;
+    background-image:url('img/paredY2.jpg');
+    position: absolute;
+    left: 100px;
+    top: 50px;
+}
+#paredDerecha3{
+	width: 50px;
+    height: 500px;
+    background-image:url('img/paredY2.jpg');
+    position: absolute;
+    left: 1000px;
+    top: 0px;
+}
+#paredArriba4{
+	width: 850px;
+    height: 50px;
+    background-image:url('img/paredX2.jpg');
+    position: absolute;
+    left: 150px;
+    top: 50px;
+}
+#paredAbajo7{
+	width: 900px;
+    height: 50px;
+    background-image:url('img/paredX2.jpg');
+    position: absolute;
+    left: 250px;
+    top: 550px;
+}
+#paredCentro1{
+	width: 50px;
+    height: 350px;
+    background-image:url('img/paredX2.jpg');
+    position: absolute;
+    left: 250px;
+    top: 150px;
+}
+#paredCentro2{
+	width: 50px;
+    height: 350px;
+    background-image:url('img/paredX2.jpg');
+    position: absolute;
+    left: 400px;
+    top: 150px;
+}
+#paredCentro3{
+	width: 50px;
+    height: 350px;
+    background-image:url('img/paredX2.jpg');
+    position: absolute;
+    left: 550px;
+    top: 150px;
+}
+#paredCentro4{
+	width: 50px;
+    height: 350px;
+    background-image:url('img/paredX2.jpg');
+    position: absolute;
+    left: 700px;
+    top: 150px;
+}
+#paredCentro5{
+	width: 50px;
+    height: 350px;
+    background-image:url('img/paredX2.jpg');
+    position: absolute;
+    left: 850px;
+    top: 150px;
+}
+#llave3{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/llave.jpg');
+    position: absolute;
+    left: 600px;
+    top: 300px;
+}
+#moneda9{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/moneda.jpg');
+    position: absolute;
+    left: 950px;
+    top: 0px;
+}
+#moneda10{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/moneda.jpg');
+    position: absolute;
+    left: 300px;
+    top: 300px;
+}
+#moneda11{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/moneda.jpg');
+    position: absolute;
+    left: 750px;
+    top: 300px;
+}
+#moneda12{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/moneda.jpg');
+    position: absolute;
+    left: 1100px;
+    top: 600px;
+}
+#puerta3{
+    width: 50px;
+    height: 50px;
+    position: absolute;
+	background-image:url('img/candado.jpg');
+	top:0px;
+	left:1100px;
+}
+#orco6{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/orco.jpg');
+    position: absolute;
+    left: 600px;
+    top: 0px;
+}
+#orco7{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/orco.jpg');
+    position: absolute;
+    left: 1050px;
+    top: 300px;
+}
+#goblin6{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/goblin.jpg');
+    position: absolute;
+    left: 500px;
+    top: 300px;
+}
+#goblin7{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/goblin.jpg');
+    position: absolute;
+    left: 950px;
+    top: 600px;
+}
+#fantasma{
+	width: 50px;
+    height: 50px;
+    background-image:url('img/fantasma.jpg');
+    position: absolute;
+    left: 650px;
+    top: 300px;
+}

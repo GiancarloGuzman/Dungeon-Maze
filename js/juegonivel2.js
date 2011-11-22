@@ -12,10 +12,10 @@ var y_goblin4 = 600;
 var x_goblin4 = 300;
 var y_goblin5 = 300;
 var x_goblin5 = 800;
-var x_llave1 = 550;
-var y_llave1 = 600;
-var x_puerta = 1100;
-var y_puerta = 600;
+var x_llave2 = 550;
+var y_llave2 = 600;
+var x_puerta2 = 1100;
+var y_puerta2 = 600;
 var x_moneda5 =	100;
 var y_moneda5 = 0;
 var x_moneda6 =	1000;
@@ -24,6 +24,13 @@ var x_moneda7 =	300;
 var y_moneda7 = 450;
 var x_moneda8 =	800;
 var y_moneda8 = 450;
+
+function detectarLlave2() {
+    if (x_nivel2 == 550 && y_nivel2 == 600) {
+		llaveObtenida = 2;
+        $("#puerta2").css({'background-image': 'url(img/puerta.jpg)'});
+		$("#llave2").css('display','none');}
+}
 
 function arribaUser2(){
 		y_nivel2 = y_nivel2 - 50;
