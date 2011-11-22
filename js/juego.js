@@ -8,6 +8,8 @@ var seleccionado="";
 		var daño="";
 		var vida="";
 		var rutasfondo=['guerrero','clerigo','valkiria'];
+		
+var contadorMon=0;
 /*-------*/
 /*var canvas*/
 var cwidth = 400;
@@ -204,6 +206,44 @@ function detectarLlave() {
         $("#puerta1").css({'background-image': 'url(img/puerta.jpg)'});
 		$("#llave1").css('display','none');}
 }
+function contadorMonedasNivel1(){
+	if (x == x_moneda1 && y == y_moneda1) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda1="";
+		y_moneda1="";
+		var d = document.getElementById("moneda1");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x == x_moneda2 && y == y_moneda2) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda2="";
+		y_moneda2="";
+		var d = document.getElementById("moneda2");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x == x_moneda3 && y == y_moneda3) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda3="";
+		y_moneda3="";
+		var d = document.getElementById("moneda3");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x == x_moneda4 && y == y_moneda4) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda4="";
+		y_moneda4="";
+		var d = document.getElementById("moneda4");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+}
 
 $('#arriba1').click(function(){
 	arribaUser(); 
@@ -214,6 +254,7 @@ $('#arriba1').click(function(){
 	detectarLlave(); 
 	salir(); 
 	detectarColision();
+	contadorMonedasNivel1();
 });
 $('#abajo1').click(function(){
 	abajoUser(); 
@@ -224,6 +265,7 @@ $('#abajo1').click(function(){
 	detectarLlave(); 
 	salir(); 
 	detectarColision();
+	contadorMonedasNivel1();
 });
 $('#izquierda1').click(function(){
 	izquierdaUser(); 
@@ -234,6 +276,7 @@ $('#izquierda1').click(function(){
 	detectarLlave(); 
 	salir(); 
 	detectarColision();
+	contadorMonedasNivel1();
 });
 $('#derecha1').click(function(){
 	derechaUser(); 
@@ -244,6 +287,7 @@ $('#derecha1').click(function(){
 	detectarLlave(); 
 	salir(); 
 	detectarColision();
+	contadorMonedasNivel1();
 });
 $('#da1').click(function(){
 	throwdice();
@@ -554,6 +598,44 @@ function movimientoGoblin2(){
 }
 /*----------------------------------*/
 /*level2*/
+function contadorMonedasNivel2(){
+	if (x_nivel2 == x_moneda5 && y_nivel2 == y_moneda5) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda5="";
+		y_moneda5="";
+		var d = document.getElementById("moneda5");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x_nivel2 == x_moneda6 && y_nivel2 == y_moneda6) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda6="";
+		y_moneda6="";
+		var d = document.getElementById("moneda6");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x_nivel2 == x_moneda7 && y_nivel2 == y_moneda7) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda7="";
+		y_moneda7="";
+		var d = document.getElementById("moneda7");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x_nivel2 == x_moneda8 && y_nivel2 == y_moneda8) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda8="";
+		y_moneda8="";
+		var d = document.getElementById("moneda8");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+}
 $('#arriba2').click(function(){
 	arribaUser2(); 
 	movimientoOrco4(); 
@@ -564,6 +646,7 @@ $('#arriba2').click(function(){
 	detectarLlave2(); 
 	salir2(); 
 	detectarColision2();
+	contadorMonedasNivel2();
 });
 $('#abajo2').click(function(){
 	abajoUser2(); 
@@ -575,6 +658,7 @@ $('#abajo2').click(function(){
 	detectarLlave2(); 
 	salir2(); 
 	detectarColision2();
+	contadorMonedasNivel2();
 });
 $('#izquierda2').click(function(){
 	izquierdaUser2(); 
@@ -586,6 +670,7 @@ $('#izquierda2').click(function(){
 	detectarLlave2(); 
 	salir2(); 
 	detectarColision2();
+	contadorMonedasNivel2();
 });
 $('#derecha2').click(function(){
 	derechaUser2(); 
@@ -597,6 +682,7 @@ $('#derecha2').click(function(){
 	detectarLlave2(); 
 	salir2(); 
 	detectarColision2();
+	contadorMonedasNivel2();
 });
 $('#da2').click(function(){
 	throwdice2();
@@ -1134,6 +1220,44 @@ function movimientoGoblin5(){
 }
 /*-----*/
 /*level3*/
+function contadorMonedasNivel3(){
+	if (x_nivel3 == x_moneda9 && y_nivel3 == y_moneda9) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda9="";
+		y_moneda9="";
+		var d = document.getElementById("moneda9");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x_nivel3 == x_moneda10 && y_nivel3 == y_moneda10) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda10="";
+		y_moneda10="";
+		var d = document.getElementById("moneda10");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x_nivel3 == x_moneda11 && y_nivel3 == y_moneda11) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda11="";
+		y_moneda11="";
+		var d = document.getElementById("moneda11");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+	else if (x_nivel3 == x_moneda12 && y_nivel3 == y_moneda12) {
+		llaveObtenida = llaveObtenida + 1;
+		x_moneda12="";
+		y_moneda12="";
+		var d = document.getElementById("moneda12");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+	}
+}
 $('#arriba3').click(function(){
 	arribaUser3(); 
 	movimientoOrco6(); 
@@ -1144,6 +1268,7 @@ $('#arriba3').click(function(){
 	detectarLlave3(); 
 	salir3(); 
 	detectarColision3();
+	contadorMonedasNivel3();
 });
 $('#abajo3').click(function(){
 	abajoUser3(); 
@@ -1152,9 +1277,10 @@ $('#abajo3').click(function(){
 	movimientoGoblin6(); 
 	movimientoGoblin7();
 	abajoFantasma()
-	detectarLlave(3); 
+	detectarLlave3(); 
 	salir3(); 
 	detectarColision3();
+	contadorMonedasNivel3();
 });
 $('#izquierda3').click(function(){
 	izquierdaUser3(); 
@@ -1166,6 +1292,7 @@ $('#izquierda3').click(function(){
 	detectarLlave3(); 
 	salir3(); 
 	detectarColision3();
+	contadorMonedasNivel3();
 });
 $('#derecha3').click(function(){
 	derechaUser3(); 
@@ -1177,6 +1304,7 @@ $('#derecha3').click(function(){
 	detectarLlave3(); 
 	salir3(); 
 	detectarColision3();
+	contadorMonedasNivel3();
 });
 $('#da3').click(function(){
 	throwdice3();

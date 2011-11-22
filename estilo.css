@@ -574,3 +574,113 @@ clear:both
     left: 650px;
     top: 300px;
 }
+
+#arriba1{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaarriba.jpg');
+    left: 1250px;
+    top: 150px;
+}
+#abajo1{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaabajo.jpg');
+    left: 1250px;
+    top: 210px;
+}
+#derecha1{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaderecha.jpg');
+    left: 1310px;
+    top: 210px;
+}
+#izquierda1{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaizquierda.jpg');
+    left: 1190px;
+    top: 210px;
+}
+#arriba2{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaarriba.jpg');
+    left: 1250px;
+    top: 260px;
+}
+#abajo2{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaabajo.jpg');
+    left: 1250px;
+    top: 320px;
+}
+#derecha2{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaderecha.jpg');
+    left: 1310px;
+    top: 320px;
+}
+#izquierda2{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaizquierda.jpg');
+    left: 1190px;
+    top: 320px;
+}
+#arriba3{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaarriba.jpg');
+    left: 1250px;
+    top: 370px;
+}
+#abajo3{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaabajo.jpg');
+    left: 1250px;
+    top: 430px;
+}
+#derecha3{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaderecha.jpg');
+    left: 1310px;
+    top: 430px;
+}
+#izquierda3{
+	width: 50px;
+    height: 50px;
+    position: absolute;
+	border: 1px solid blue;
+	background-image:url('img/flechaizquierda.jpg');
+    left: 1190px;
+    top: 430px;
+}
+
