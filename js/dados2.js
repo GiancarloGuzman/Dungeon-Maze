@@ -12,9 +12,9 @@ var cwidth = 400;
   var cd;
 
   
-  function throwdice(){
-    ch = 2;/*1+Math.floor(Math.random()*5);*/
-	cd = 4;/*1+Math.floor(Math.random()*5);*/
+  function throwdice2(){
+    ch = 3;/*1+Math.floor(Math.random()*5);*/
+	cd = 6;/*1+Math.floor(Math.random()*5);*/
     dx = dicex;
     dy = dicey;    
     drawface(ch);
@@ -32,10 +32,10 @@ var cwidth = 400;
 		
 	}*/
 	
-	if(ch==2 && cd==4)
+	if(ch==3 && cd==6)
 	{	
-		$("#pelea").css('display','none');
-		$("#level1").css('display','block');
+		$("#pelea2").css('display','none');
+		$("#level2").css('display','block');
 		
 	}
 	/*ch=3;

@@ -1,7 +1,5 @@
 var y_nivel2 = 300;
 var x_nivel2 = 0;
-var y_orco3 = 0;
-var x_orco3 = 550;
 var y_orco4 = 300;
 var x_orco4 = 300;
 var y_orco5 = 600;
@@ -12,8 +10,8 @@ var y_goblin4 = 600;
 var x_goblin4 = 300;
 var y_goblin5 = 300;
 var x_goblin5 = 800;
-var x_llave2 = 550;
-var y_llave2 = 600;
+var x_llave1 = 550;
+var y_llave1 = 600;
 var x_puerta2 = 1100;
 var y_puerta2 = 600;
 var x_moneda5 =	100;
@@ -25,12 +23,6 @@ var y_moneda7 = 450;
 var x_moneda8 =	800;
 var y_moneda8 = 450;
 
-function detectarLlave2() {
-    if (x_nivel2 == 550 && y_nivel2 == 600) {
-		llaveObtenida = 2;
-        $("#puerta2").css({'background-image': 'url(img/puerta.jpg)'});
-		$("#llave2").css('display','none');}
-}
 
 function arribaUser2(){
 		y_nivel2 = y_nivel2 - 50;
@@ -92,20 +84,89 @@ function izquierdaUser2(){
 		if (x_nivel2 == 700 && y_nivel2 > 0 && y_nivel2 < 100) x_nivel2 = 750;		
         $("#pedobear2").css({ "left": x_nivel2 + "px"});
 }
-function arribaOrco3(){
-		y_orco3 = y_orco3 - 50;
-		if (y_orco3 < 0) y_orco3 = 0;
-		if (y_orco3 == 50 && x_orco3 >= 0 && x_orco3 < 350) y_orco3 = 100;
-		if (y_orco3 == 50 && x_orco3 >= 400 && x_orco3 < 750) y_orco3 = 100;
-		if (y_orco3 == 50 && x_orco3 >= 800 && x_orco3 < 1150) y_orco3 = 100;
-		if (y_orco3 == 200 && x_orco3 >= 250 && x_orco3 < 500) y_orco3 = 250;
-		if (y_orco3 == 200 && x_orco3 >= 650 && x_orco3 < 900) y_orco3 = 250;
-		if (y_orco3 == 350 && x_orco3 >= 250 && x_orco3 < 500) y_orco3 = 400;
-		if (y_orco3 == 350 && x_orco3 >= 650 && x_orco3 < 900) y_orco3 = 400;
-		if (y_orco3 == 500 && x_orco3 >= 250 && x_orco3 < 500) y_orco3 = 550;
-		if (y_orco3 == 500 && x_orco3 >= 650 && x_orco3 < 900) y_orco3 = 550;
-        $("#orco3").css({ "top": y_orco3 + "px"});
+function detectarLlave2() {
+    if (x_nivel2 ==550 && y_nivel2 == 600) {
+		llaveObtenida = 1;
+        $("#puerta2").css({'background-image': 'url(img/puerta.jpg)'});
+		$("#llave2").css('display','none');}
 }
+
+function detectarColision2() {
+    
+	if (x_nivel2 == x_orco4 && y_nivel2 == y_orco4) {
+		pelea2();
+		x_orco4="";
+		y_orco4="";
+		var d = document.getElementById("orco4");
+		var p= d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+        $('#orco4').fadeOut('slow', function() {
+      });
+	}
+	else if (x_nivel2 == x_orco5 && y_nivel2 == y_orco5) {
+		pelea2();
+		x_orco5="";
+		y_orco5="";
+		var d = document.getElementById("orco5");
+		var p= d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+        $('#orco5').fadeOut('slow', function() {
+      });
+	}
+	else if (x_nivel2 == x_goblin3 && y_nivel2 == y_goblin3) {
+       	pelea2();
+		x_goblin3="";
+		y_goblin3="";
+		var d = document.getElementById("goblin3");
+		var p= d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+        $('#goblin3').fadeOut('slow', function() {
+      });
+    }
+	else if (x_nivel2 == x_goblin4 && y_nivel2 == y_goblin4) {
+       	pelea2();
+		x_goblin4="";
+		y_goblin4="";
+		var d = document.getElementById("goblin4");
+		var p= d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+        $('#goblin4').fadeOut('slow', function() {
+      });
+    }
+	else if(x_nivel2 == x_goblin5 && y_nivel2 == y_goblin5) {
+       	pelea2();
+		x_goblin5="";
+		y_goblin5="";
+		var d = document.getElementById("goblin5");
+		var p=d.parentNode;
+		p.removeChild(d);	
+        clearInterval(interval_id);
+        $('#goblin5').fadeOut('slow', function() {
+      });
+    }
+}
+function pelea2()
+{
+		$("#pelea2").css('display','block');
+		$("#level2").css('display','none');
+	
+}
+function salir2()
+{
+	if(y_nivel2 == 600 && x_nivel2 == 1100){
+	
+		$("#level2").fadeOut('slow', function() {
+			$("#level3").css("display", "none");
+		});
+		$("#level3").fadeIn('slow', function() {
+			$("#level3").css("display", "block");
+		});}
+}
+
 function arribaOrco4(){
 		y_orco4 = y_orco4 - 50;
 		if (y_orco4 < 0) y_orco4 = 0;
@@ -176,22 +237,7 @@ function arribaGoblin5(){
 		if (y_goblin5 == 500 && x_goblin5 >= 650 && x_goblin5 < 900) y_goblin5 = 550;
         $("#goblin5").css({ "top": y_goblin5 + "px"});
 }
-function abajoOrco3(){
-		y_orco3 = y_orco3 + 50;
-		if (y_orco3 > 550) y_orco3 = 600;
-		if (y_orco3 == 50 && x_orco3 >= 0 && x_orco3 < 350) y_orco3 = 0;
-		if (y_orco3 == 50 && x_orco3 >= 400 && x_orco3 < 750) y_orco3 = 0;
-		if (y_orco3 == 50 && x_orco3 >= 800 && x_orco3 < 1150) y_orco3 = 0;
-		if (y_orco3 == 200 && x_orco3 >= 250 && x_orco3 < 500) y_orco3 = 150;
-		if (y_orco3 == 200 && x_orco3 >= 650 && x_orco3 < 900) y_orco3 = 150;
-		if (y_orco3 == 350 && x_orco3 >= 250 && x_orco3 < 500) y_orco3 = 300;
-		if (y_orco3 == 350 && x_orco3 >= 650 && x_orco3 < 900) y_orco3 = 300;
-		if (y_orco3 == 500 && x_orco3 >= 250 && x_orco3 < 500) y_orco3 = 450;
-		if (y_orco3 == 500 && x_orco3 >= 650 && x_orco3 < 900) y_orco3 = 450;
-		if (y_orco3 == 150 && x_orco3 >= 100 && x_orco3 < 150) y_orco3 = 100;
-		if (y_orco3 == 150 && x_orco3 >= 1000 && x_orco3 < 1050) y_orco3 = 100;
-        $("#orco3").css({ "top": y_orco3 + "px"});
-}
+
 function abajoOrco4(){
 		y_orco4 = y_orco4 + 50;
 		if (y_orco4 > 550) y_orco4 = 600;
@@ -272,21 +318,7 @@ function abajoGoblin5(){
 		if (y_goblin5 == 150 && x_goblin5 >= 1000 && x_goblin5 < 1050) y_goblin5 = 100;
         $("#goblin5").css({ "top": y_goblin5 + "px"});
 }
-function derechaOrco3(){
-		x_orco3 = x_orco3 + 50;
-        if (x_orco3 > 1050) x_orco3 = 1100;
-		if (x_orco3 == 100 && y_orco3 > 100 && y_orco3 < 650) x_orco3 = 50;
-		if (x_orco3 == 1000 && y_orco3 > 100 && y_orco3 < 650) x_orco3 = 950;
-		if (x_orco3 == 250 && y_orco3 > 150 && y_orco3 < 250) x_orco3 = 200;
-		if (x_orco3 == 250 && y_orco3 > 300 && y_orco3 < 400) x_orco3 = 200;
-		if (x_orco3 == 250 && y_orco3 > 450 && y_orco3 < 550) x_orco3 = 200;
-		if (x_orco3 == 650 && y_orco3 > 150 && y_orco3 < 250) x_orco3 = 600;
-		if (x_orco3 == 650 && y_orco3 > 300 && y_orco3 < 400) x_orco3 = 600;
-		if (x_orco3 == 650 && y_orco3 > 450 && y_orco3 < 550) x_orco3 = 600;
-		if (x_orco3 == 400 && y_orco3 > 0 && y_orco3 < 100) x_orco3 = 350;
-		if (x_orco3 == 800 && y_orco3 > 0 && y_orco3 < 100) x_orco3 = 750;	
-        $("#orco3").css({ "left": x_orco3 + "px"});
-}
+
 function derechaOrco4(){
 		x_orco4 = x_orco4 + 50;
         if (x_orco4 > 1050) x_orco4 = 1100;
@@ -362,21 +394,7 @@ function derechaGoblin5(){
 		if (x_goblin5 == 800 && y_goblin5 > 0 && y_goblin5 < 100) x_goblin5 = 750;	
         $("#goblin5").css({ "left": x_goblin5 + "px"});
 }
-function izquierdaOrco3(){
-		x_orco3 = x_orco3 - 50;
-		if (x_orco3 < 0) x_orco3 = 0;
-		if (x_orco3 == 100 && y_orco3 > 100 && y_orco3 < 650) x_orco3 = 150;
-		if (x_orco3 == 1000 && y_orco3 > 100 && y_orco3 < 650) x_orco3 = 1050;
-		if (x_orco3 == 450 && y_orco3 > 150 && y_orco3 < 250) x_orco3 = 500;
-		if (x_orco3 == 450 && y_orco3 > 300 && y_orco3 < 400) x_orco3 = 500;
-		if (x_orco3 == 450 && y_orco3 > 450 && y_orco3 < 550) x_orco3 = 500;
-		if (x_orco3 == 850 && y_orco3 > 150 && y_orco3 < 250) x_orco3 = 900;
-		if (x_orco3 == 850 && y_orco3 > 300 && y_orco3 < 400) x_orco3 = 900;
-		if (x_orco3 == 850 && y_orco3 > 450 && y_orco3 < 550) x_orco3 = 900;
-		if (x_orco3 == 300 && y_orco3 > 0 && y_orco3 < 100) x_orco3 = 350;
-		if (x_orco3 == 700 && y_orco3 > 0 && y_orco3 < 100) x_orco3 = 750;
-        $("#orco3").css({ "left": x_orco3 + "px"});
-}
+
 function izquierdaOrco4(){
 		x_orco4 = x_orco4 - 50;
 		if (x_orco4 < 0) x_orco4 = 0;
@@ -451,22 +469,6 @@ function izquierdaGoblin5(){
 		if (x_goblin5 == 300 && y_goblin5 > 0 && y_goblin5 < 100) x_goblin5 = 350;
 		if (x_goblin5 == 700 && y_goblin5 > 0 && y_goblin5 < 100) x_goblin5 = 750;
         $("#goblin5").css({ "left": x_goblin5 + "px"});
-}
-function movimientoOrco3(){
-		if(y_nivel2 > y_orco3){
-			abajoOrco3();
-		}
-		else if(y_nivel2 < y_orco3){
-			arribaOrco3();
-		}
-		else if(y_nivel2 == y_orco3){
-			if( x_nivel2 > x_orco3 ){
-				derechaOrco3();
-			}
-			else if( x_nivel2 < x_orco3 ){
-				izquierdaOrco3();
-			}
-		}
 }
 function movimientoOrco4(){
 		if(y_nivel2 > y_orco4){
