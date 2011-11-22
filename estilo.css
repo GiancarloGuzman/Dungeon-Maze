@@ -840,3 +840,11 @@ clear:both
     left: 0px;
     top: 0px;
 }
+#gameover{
+	width: 1150px;
+    height: 650px;
+    border: 1px solid #000;
+    position: relative;
+	background-image:url('img/gameover.jpg');
+	margin-left:10px;
+}

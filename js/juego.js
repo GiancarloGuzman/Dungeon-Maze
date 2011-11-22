@@ -528,7 +528,8 @@ function actualizarDatosEnemigo(){
 function detectarganador(){
 	if(vida<=0){
 		$("#pelea").css('display','none');
-		$("#level1").css('display','block');
+		$("#gameover").css('display','block');
+		$("#tusdatos").css('display', 'block');
 		alert('Usted ah perdido');
 	}
 	if (x == x_orco1 && y == y_orco1) {
@@ -1051,7 +1052,8 @@ $('#da2').click(function(){
 function detectarganador2(){
 	if(vida<=0){
 		$("#pelea2").css('display','none');
-		$("#level2").css('display','block');
+		$("#gameover").css('display','block');
+		$("#tusdatos").css('display', 'block');
 		alert('Usted ah perdido');
 	}
 	if (x_nivel2 == x_orco4 && y_nivel2 == y_orco4) {
@@ -1108,7 +1110,8 @@ function detectarganador2(){
 function detectarganador3(){
 	if(vida<=0){
 		$("#pelea3").css('display','none');
-		$("#level3").css('display','block');
+		$("#gameover").css('display','block');
+		$("#tusdatos").css('display', 'block');
 		alert('Usted ah perdido');
 	}
 	if (x_nivel3 == x_orco6 && y_nivel3 == y_orco6) {
@@ -2326,10 +2329,11 @@ function salir3()
 		}
 		else if(puerta3abierta==1){
 		$("#level3").fadeOut('slow', function() {
-			$("#level3").css("display", "none");
+			$("#level3").css('display', 'none');
 		});
 		$("#gameover").fadeIn('slow', function() {
-			$("#gameover").css("display", "block");
+			$("#gameover").css('display', 'block');
+			$("#tusdatos").css('display', 'block');
 		});
 		}
 	}
